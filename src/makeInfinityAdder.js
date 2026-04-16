@@ -3,10 +3,10 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
+function makeAdder() {
   let sum = 0;
 
-  function makeAdder(n) {
+  function adder(n) {
     if (n === undefined) {
       const result = sum;
 
@@ -17,10 +17,10 @@ function makeInfinityAdder() {
 
     sum += n;
 
-    return makeAdder;
+    return adder;
   }
 
-  return makeAdder;
+  return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
